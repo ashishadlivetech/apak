@@ -22,7 +22,7 @@ class SetLocale
     // }
 
       public function handle($request, Closure $next)
-    {
+    { //dd(session()->get('locale'));
         if (session()->has('locale')) {
             App::setLocale(session()->get('locale'));
         }

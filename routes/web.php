@@ -31,12 +31,14 @@ Route::get('/updateapp', function () {
     Artisan::call('dump-autoload');
     echo 'dump-autoload complete';
 });
-Route::get('set-locale/{locale}', function ($locale) {
-    \App::setLocale($locale);
-    session()->put('locale', $locale);
-    
-    return redirect()->back();
-})->middleware('setlocale')->name('locale.setting');
+//Route::get('set-locale/{locale}', function ($locale) {
+//    \App::setLocale($locale);
+//    session()->put('locale', $locale);
+//    
+//    return redirect()->back();
+//})->middleware('setlocale')->name('locale.setting');
+
+Route::get('set-locale/{locale}', 'LocalitionController@index')->name('locale.setting');
 
 // Route::get('set-locale/{locale}', function ($locale) {
 //                if (in_array($locale, \Config::get('app.locales'))) { session()->put('locale', $locale); }

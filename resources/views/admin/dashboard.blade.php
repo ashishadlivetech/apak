@@ -2,7 +2,7 @@
 
 @section('content')
     @include('layouts.headers.cards')
-    
+
     <div class="container-fluid mt--7">
         <div class="row">
             <div class="col-xl-8 mb-5 mb-xl-0">
@@ -45,15 +45,13 @@
                     <div class="card-header bg-transparent">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h6 class="text-uppercase text-muted ls-1 mb-1">Performance</h6>
-                                <h2 class="mb-0">Total</h2>
+                                <h2 class="text-uppercase text-muted ls-1 mb-1">Clipboard</h2>
                             </div>
                         </div>
                     </div>
                     <div class="card-body">
-                        <!-- Chart -->
-                        <div class="chart">
-                            <canvas id="chart-orders" class="chart-canvas"></canvas>
+                        <div class="whiteboard">
+                            <textarea id="whiteboard" style="width: 90%;height: 75%;font-size: 18px;margin: 20px;border: 10px solid #7b61e4;" readonly="">nmmnkmlkml</textarea><button id="edit" data-focus="off" hidden="true">Edit</button>
                         </div>
                     </div>
                 </div>
@@ -65,96 +63,44 @@
                     <div class="card-header border-0">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h3 class="mb-0">Page visits</h3>
+                                <h3 class="mb-0">{{ __('Course Modification Proposals') }}</h3>
                             </div>
                             <div class="col text-right">
-                                <a href="#!" class="btn btn-sm btn-primary">See all</a>
+                                {{__('There are') }}
+                                <a href="#!" class="btn btn-sm btn-primary">0</a>
+                                {{__('requests to evaluate') }}
                             </div>
                         </div>
                     </div>
-                    <div class="table-responsive">
-                        <!-- Projects table -->
-                        <table class="table align-items-center table-flush">
-                            <thead class="thead-light">
-                                <tr>
-                                    <th scope="col">Page name</th>
-                                    <th scope="col">Visitors</th>
-                                    <!-- <th scope="col">Unique users</th> -->
-                                    <th scope="col">Bounce rate</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                    <th scope="row">
-                                 
-                                    </th>
-                                    <td>
-                                      
-                                    </td>
-                                    <td>
-                                        <i class="fas fa-arrow-up text-success mr-3"></i> 46,53%
-                                    </td>
-                                </tr>
-                                <!-- 
-                                <tr>
-                                    <th scope="row">
-                                        /argon/index.html
-                                    </th>
-                                    <td>
-                                        3,985
-                                    </td>
-                                    <td>
-                                        319
-                                    </td>
-                                    <td>
-                                        <i class="fas fa-arrow-down text-warning mr-3"></i> 46,53%
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        /argon/charts.html
-                                    </th>
-                                    <td>
-                                        3,513
-                                    </td>
-                                    <td>
-                                        294
-                                    </td>
-                                    <td>
-                                        <i class="fas fa-arrow-down text-warning mr-3"></i> 36,49%
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        /argon/tables.html
-                                    </th>
-                                    <td>
-                                        2,050
-                                    </td>
-                                    <td>
-                                        147
-                                    </td>
-                                    <td>
-                                        <i class="fas fa-arrow-up text-success mr-3"></i> 50,87%
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        /argon/profile.html
-                                    </th>
-                                    <td>
-                                        1,795
-                                    </td>
-                                    <td>
-                                        190
-                                    </td>
-                                    <td>
-                                        <i class="fas fa-arrow-down text-danger mr-3"></i> 46,53%
-                                    </td>
-                                </tr> -->
-                            </tbody>
-                        </table>
+                </div><br>
+                <div class="card shadow">
+                    <div class="card-header border-0">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h3 class="mb-0">{{ __('Members') }}</h3>
+                            </div>
+                            <div class="col text-right">
+                                <a href="#!" class="btn btn-sm btn-primary">359</a>
+                                {{__('members are registered .') }}
+                            </div>
+                        </div>
                     </div>
+
+                </div><br>
+                <div class="card shadow">
+                    <div class="card-header border-0">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h3 class="mb-0">{{ __('Payment status') }}</h3>
+                            </div>
+                            <div class="col text-right">
+                                {{__('There are') }}
+                                <a href="#!" class="btn btn-sm btn-primary">319</a>
+                                {{__('outstanding payments .') }}
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div class="col-xl-4">
@@ -162,122 +108,120 @@
                     <div class="card-header border-0">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h3 class="mb-0">Social traffic</h3>
+                                <h3 class="mb-0">{{__('Events') }}</h3>
                             </div>
-                            <div class="col text-right">
-                                <a href="#!" class="btn btn-sm btn-primary">See all</a>
-                            </div>
+
                         </div>
                     </div>
-                    <div class="table-responsive">
-                        <!-- Projects table -->
-                        <table class="table align-items-center table-flush">
-                            <thead class="thead-light">
-                                <tr>
-                                    <th scope="col">Referral</th>
-                                    <th scope="col">Visitors</th>
-                                    <th scope="col"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">
-                                        Facebook
-                                    </th>
-                                    <td>
-                                        1,480
-                                    </td>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <span class="mr-2">60%</span>
-                                            <div>
-                                                <div class="progress">
-                                                <div class="progress-bar bg-gradient-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        Facebook
-                                    </th>
-                                    <td>
-                                        5,480
-                                    </td>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <span class="mr-2">70%</span>
-                                            <div>
-                                                <div class="progress">
-                                                <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        Google
-                                    </th>
-                                    <td>
-                                        4,807
-                                    </td>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <span class="mr-2">80%</span>
-                                            <div>
-                                                <div class="progress">
-                                                <div class="progress-bar bg-gradient-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        Instagram
-                                    </th>
-                                    <td>
-                                        3,678
-                                    </td>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <span class="mr-2">75%</span>
-                                            <div>
-                                                <div class="progress">
-                                                    <div class="progress-bar bg-gradient-info" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        twitter
-                                    </th>
-                                    <td>
-                                        2,645
-                                    </td>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <span class="mr-2">30%</span>
-                                            <div>
-                                                <div class="progress">
-                                                <div class="progress-bar bg-gradient-warning" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+
+                    <div class="row align-items-center">
+
+                        <div class="col text-center">
+                            <div class="col">
+                                <a href="#!" class="btn btn-sm btn-primary">45</a>
+                                {{__('events are active .') }}
+                            </div>
+
+
+                        </div>
                     </div>
+                    <hr>
+                    <div class="row align-items-center">
+                        <div class="col text-center">
+                            <a href="#!" class="btn btn-sm btn-primary">45</a>
+                            {{__('At the moment') }}<br>
+                            <a href="#!" class="btn btn-sm btn-primary">0</a>
+                            {{__('events are in progress out of a total of') }}
+                            <a href="#!" class="btn btn-sm btn-primary">0</a>
+                            {{__('scheduled for today') }}
+                        </div>
+                    </div>
+                    <br>
                 </div>
             </div>
         </div>
 
-       
+        <div class="row mt-5">
+            <div class="col-xl-8 mb-5 mb-xl-0">
+                <div class="card shadow">
+                    <div class="card-header border-0">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h3 class="mb-0">{{ __('Payments accepted today') }}</h3>
+                            </div>
+                            <div class="col text-right">
+
+                                <a href="#!" class="btn btn-sm btn-primary">0</a>
+                                {{__('payments have been accepted for a total of') }} 0.00 €.
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
+                <div class="card shadow">
+                    <div class="card-header border-0">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h3 class="mb-0">{{ __('Payments accepted yesterday') }}</h3>
+                            </div>
+                            <div class="col text-right">
+                                <a href="#!" class="btn btn-sm btn-primary">359</a>
+                                {{__('payments have been accepted for a total of') }} 0.00 €.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-xl-4">
+                <div class="card shadow">
+                    <div class="card-header border-0">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h3 class="mb-0">{{__('CM status registered') }}</h3>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center">
+
+                        <div class="col text-center">
+                            <div class="col">
+                                {{__('There are') }}
+                                <a href="#!" class="btn btn-sm btn-primary">94</a>
+                                {{__('expired CMs .') }}
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row align-items-center">
+
+                        <div class="col text-center">
+                            <div class="col">
+                                <a href="#!" class="btn btn-sm btn-primary">43</a>
+                                {{__('CM expiring in the month.') }}
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row align-items-center">
+                        <div class="col text-center">
+                            {{__('a total of') }}
+                            <a href="#!" class="btn btn-sm btn-primary">207</a>
+                            {{__('subscribers do not have a CM.') }}
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <br>
+
+            </div>
     </div>
 @endsection
 

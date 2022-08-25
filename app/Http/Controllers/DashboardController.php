@@ -10,11 +10,10 @@ class DashboardController extends Controller
     //
     public function index()
     {
-//    if(Auth::user()->role_id == Role::SELLER_ROLE_ID){
-//
-// 	return redirect('admin/seller_profile');
-//    	}
-        return view('admin.dashboard');
+        if(Auth::user()){
+            return view('admin.dashboard');
+        }
+        return redirect()->route('admin_login');
        
         
     }

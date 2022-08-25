@@ -22,7 +22,13 @@ class AppServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {
-        //
+    {//dd(session()->has('locale'));
+        view()->composer('*', function ($view) 
+    { 
+        if (session()->has('locale')) {
+            \App::setLocale(session()->get('locale'));
+        }
+            
+    }); 
     }
 }
